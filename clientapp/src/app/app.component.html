@@ -1,0 +1,29 @@
+<div>
+<h1 style="color: red; background-color: orange;" align="center">iShare - Where Ideas Conclave</h1>
+<div>
+  <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>Article Id</th>
+          <th>Title</th>
+          <th>Author</th>
+          <th>Tags</th>
+          <th>Date</th>
+          <th>Rating</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let article of articleslist">
+          <td>{{article.id}}</td>
+          <td>{{article.title}}</td>
+          <td>{{article.author}}</td>
+          <td>
+            <li *ngFor="let i of article['tags']">{{i}}</li>
+          </td>
+          <td>{{article.date}}</td>
+          <td>{{article.rating}}</td>
+        </tr>
+      </tbody>
+  </table>
+</div>  
+</div>
